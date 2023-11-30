@@ -1,0 +1,12 @@
+.copyright {
+  font-variant: small-caps;
+}
+
+.telegram {
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

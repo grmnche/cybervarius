@@ -1,0 +1,203 @@
+nav {
+  font-variant: small-caps;
+  z-index: 100;
+}
+
+.nav-logo {
+  transition: 0.4s !important;
+  position: absolute;
+  top: 0.4rem;
+  left: 2rem;
+}
+
+.nav-logo:hover {
+  opacity: 0.7;
+}
+
+.nav-lib,
+.nav-books {
+  position: relative;
+}
+
+.nav-lib-chernyshev,
+.nav-lib-holmov {
+  color: $main-shadow;
+  background: rgba(39, 43, 43, 0.7);
+  border-radius: $border-radius;
+  transition: 0.4s;
+
+  &:hover {
+    background: $main-shadow;
+  }
+}
+
+.nav-list .nav-link:before,
+.nav-list .nav-link:after {
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 2s ease;
+}
+
+.nav-list .nav-link:before {
+  height: 100%;
+  width: 0%;
+  opacity: 0.4;
+  border-radius: 4px;
+  content: '';
+  background-color: $main-color;
+  z-index: -1;
+}
+
+.nav-list .nav-link:hover:before,
+.nav-list .active:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.nav-list .nav-link:hover:after,
+.nav-list .active:after {
+  max-width: 100%;
+}
+
+.nav-link-inner {
+  padding: 6px 40px 6px 40px;
+  z-index: 100;
+}
+
+.nav-link {
+  display: inline-block;
+  transition: 0.4s !important;
+  color: $main-color;
+  position: relative;
+  
+  border: 2px solid $main-color;
+  border-radius: $border-radius;
+}
+
+.nav-link-shadow {
+  @extend .nav-link;
+  box-shadow: 0px 0px 40px $main-shadow;
+}
+
+.lib-chapters,
+.books-chapters {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+// Burger panel
+.checkbox {
+  display: none;
+}
+
+@media screen and (max-width: 1490px) {
+  nav {
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+
+  .menu-list {
+    display: flex;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+  }
+
+  nav {
+    display: block;
+  }
+
+  .checkbox {
+    position: absolute;
+    top: 1.6rem;
+    display: block;
+    height: 32px;
+    width: 32px;
+    right: 1rem;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-150%);
+    flex-direction: column;
+    row-gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    opacity: 0;
+    z-index: 10000;
+  }
+
+  nav input[type='checkbox']:checked ~ .nav-list {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  nav input[type='checkbox']:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  nav input[type='checkbox']:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  nav input[type='checkbox']:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+
+  .nav-logo {
+    top: 1.4rem !important;
+    left: 0.8rem !important;
+  }
+}

@@ -1,0 +1,104 @@
+.story-card-inner,
+.book-card-inner {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  position: relative;
+
+  color: $main-color;
+  border: 2px solid $main-shadow;
+  border-radius: $border-radius;
+  transition: 0.4s !important;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 20px $main-shadow;
+  }
+}
+
+.series,
+.number,
+.additionally {
+  pointer-events: none;
+  color: $main-shadow;
+}
+
+.story-preview,
+.book-preview {
+  background: rgba(100, 111, 110, 0.2);
+  border-radius: $border-radius;
+  max-height: 72vh;
+
+  overflow-y: scroll;
+  overflow-x: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .stories-outer,
+  .books-outer {
+    height: 80vh;
+  }
+  .story-preview,
+  .book-preview {
+    height: 46vh;
+
+    &::-webkit-scrollbar {
+      width: 4px !important;
+    }
+  }
+}
+
+.story-image,
+.book-image {
+  border-radius: $border-radius;
+}
+
+.story-btn,
+.book-btn {
+  background: $main-color;
+  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  border-radius: $border-radius;
+  font-variant: small-caps;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.series-header {
+  color: $main-shadow;
+}
+
+.book-number {
+  font-variant: small-caps;
+  color: $main-color-dark;
+}
+
+.book-series {
+  color: $main-color;
+  font-variant: small-caps;
+}
+
+.quote {
+  color: $main-color;
+  opacity: 0.6;
+}
+
+.stories-outer {
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 72vh;
+  padding-top: 5vh;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
