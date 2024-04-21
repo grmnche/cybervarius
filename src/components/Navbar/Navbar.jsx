@@ -86,13 +86,13 @@ function Navbar() {
           >
             <NavLink to="/libChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
-                <img className="w-10" src="./images/chernyshev.png" alt="" />
+                <img className="w-10" src="./assets/images/chernyshev.png" alt="" />
               </div>
             </NavLink>
 
             <NavLink to="/libHolmov" onClick={handleNavLinkClick}>
               <div className="nav-lib-holmov mt-2 p-1 absolute right-0">
-                <img className="w-10" src="./images/holmov.png" alt="" />
+                <img className="w-10" src="./assets/images/holmov.png" alt="" />
               </div>
             </NavLink>
           </div>
@@ -124,13 +124,13 @@ function Navbar() {
           >
             <NavLink to="/booksChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
-                <img className="w-10" src="./images/chernyshev.png" alt="" />
+                <img className="w-10" src="./assets/images/chernyshev.png" alt="" />
               </div>
             </NavLink>
 
             <NavLink to="/booksHolmov" onClick={handleNavLinkClick}>
               <div className="nav-lib-holmov mt-2 p-1 absolute right-0">
-                <img className="w-10" src="./images/holmov.png" alt="" />
+                <img className="w-10" src="./assets/images/holmov.png" alt="" />
               </div>
             </NavLink>
           </div>

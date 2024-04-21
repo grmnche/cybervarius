@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import 'aos/dist/aos.css';
 
 export function StoriesHolmov({ storyCardsHolmov }) {
-
   const ref = useRef(null);
   const refPrev = useRef(null);
 

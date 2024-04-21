@@ -4,7 +4,9 @@ import Greet from '../components/Greet.jsx';
 export function Home() {
   return (
     <Fragment>
-      <Greet />
+      <div className='home-page'>
+        <Greet />
+      </div>
     </Fragment>
   );
 }

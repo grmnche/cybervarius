@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 
 import 'aos/dist/aos.css';
 import { NavLink } from 'react-router-dom';
-import '../../images/chernyshev.png';
-import '../../images/holmov.png';
+import '../../assets/images/chernyshev.png';
+import '../../assets/images/holmov.png';
 
 export const BookAuthors = () => {
   return (
@@ -17,7 +17,7 @@ export const BookAuthors = () => {
             <div className="author author-chernyshev">
               <img
                 className="chernyshev-img mx-auto w-24 lg:w-32"
-                src="./images/chernyshev.png"
+                src="./assets/images/chernyshev.png"
                 alt="..."
               />
               <p
@@ -38,7 +38,7 @@ export const BookAuthors = () => {
             <div className="author author-holmov">
               <img
                 className="holmov-img mx-auto w-24 lg:w-32"
-                src="./images/holmov.png"
+                src="./assets/images/holmov.png"
                 alt="..."
               />
 

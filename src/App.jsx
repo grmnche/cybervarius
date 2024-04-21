@@ -12,9 +12,13 @@ import Footer from './components/Footer/Footer.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {
+  const divStyle = {
+    backgroundImage: 'url("./assets/images/bg-city-blur.png")',
+  };
+
   return (
     <HashRouter>
-      <div className="App">
+      <div className="app" style={divStyle}>
         <Navbar />
         <Routes>
           <Route path={'/'} exact Component={Home} />

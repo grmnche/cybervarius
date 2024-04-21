@@ -22,28 +22,6 @@
   src: url('../roboto/Roboto-Light.ttf');
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-family: 'Roboto', sans-serif;
-
-  background: url('https://github.com/grmnche/images/blob/main/bg-city-blur.jpg?raw=true');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #0c0c0e;
-
-  color: $main-color;
-  text-transform: lowercase;
-}
-
-.App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 * {
   &::-webkit-scrollbar {
     width: 4px;
@@ -56,6 +34,40 @@ body {
     border-radius: $border-radius;
     background: rgb(79, 86, 82);
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+
+  color: $main-color;
+  text-transform: lowercase;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+}
+
+#root {
+  height: 100%;
+}
+
+.home-page {
+  height: 100vh;
 }
 
 .about {

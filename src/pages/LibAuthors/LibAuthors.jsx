@@ -1,10 +1,6 @@
 import React, { Fragment } from 'react';
-
 import 'aos/dist/aos.css';
 import { NavLink } from 'react-router-dom';
-
-import '../../images/chernyshev.png';
-import '../../images/holmov.png';
 
 export const LibAuthors = () => {
   return (
@@ -18,7 +14,7 @@ export const LibAuthors = () => {
             <div className="author w-full author-chernyshev">
               <img
                 className="chernyshev-img mx-auto w-32 lg:w-48"
-                src="./images/chernyshev.png"
+                src="./assets/images/chernyshev.png"
                 alt="..."
               />
               <div className="w-full">
@@ -50,7 +46,7 @@ export const LibAuthors = () => {
             <div className="author w-full author-holmov">
               <img
                 className="holmov-img mx-auto w-32 lg:w-48"
-                src="./images/holmov.png"
+                src="./assets/images/holmov.png"
                 alt="..."
               />
 
