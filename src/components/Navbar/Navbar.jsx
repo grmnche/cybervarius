@@ -42,11 +42,13 @@ function Navbar() {
       </div>
 
       <div className="nav-logo">
-        <img
-          className="w-32 lg:48 inline-block"
-          src="https://raw.githubusercontent.com/grmnche/images/97810d95c1887aff2a6d35e8639d291c448498bf/cybervarius/logo.svg"
-          alt=""
-        />
+        <NavLink to="/" end>
+          <img
+            className="w-32 lg:48 inline-block"
+            src="./assets/images/logo.svg"
+            alt=""
+          />
+        </NavLink>
       </div>
 
       <ul className="nav-list text-lg md:text-xl lg:text-2xl">
@@ -86,7 +88,11 @@ function Navbar() {
           >
             <NavLink to="/libChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
-                <img className="w-10" src="./assets/images/chernyshev.png" alt="" />
+                <img
+                  className="w-10"
+                  src="./assets/images/chernyshev.png"
+                  alt=""
+                />
               </div>
             </NavLink>
 
@@ -124,7 +130,11 @@ function Navbar() {
           >
             <NavLink to="/booksChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
-                <img className="w-10" src="./assets/images/chernyshev.png" alt="" />
+                <img
+                  className="w-10"
+                  src="./assets/images/chernyshev.png"
+                  alt=""
+                />
               </div>
             </NavLink>
 
