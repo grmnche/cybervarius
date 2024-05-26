@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const LibAuthors = () => {
   return (
     <Fragment>
-      <div className="lg:mx-32 mt-16 lg:h-screen lg:flex lg:justify-center lg:items-end">
+      <div className="lg:mx-32 mt-16 lg:h-screen lg:flex lg:justify-center lg:items-center">
         <div
           data-aos="fade-up"
           className="chernyshev cyber-text-container my-20 mx-auto lg:mx-10 w-11/12 lg:w-1/2"
