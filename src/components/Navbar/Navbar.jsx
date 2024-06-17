@@ -10,15 +10,15 @@ function Navbar() {
 
   const [isActiveLib, setIsActiveLib] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isActiveBooks, setIsActiveBooks] = useState(false);
 
   function handleNavLinkClick() {
     setIsNavOpen(false);
   }
+
   function libHandler() {
     setIsActiveLib((isActiveLib) => !isActiveLib);
   }
-
-  const [isActiveBooks, setIsActiveBooks] = useState(false);
 
   function booksHandler() {
     setIsActiveBooks((isActiveBooks) => !isActiveBooks);

@@ -1,9 +1,6 @@
 import React, { Fragment } from 'react';
-
 import 'aos/dist/aos.css';
 import { NavLink } from 'react-router-dom';
-import '../../assets/images/chernyshev.png';
-import '../../assets/images/holmov.png';
 
 export const BookAuthors = () => {
   return (
