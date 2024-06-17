@@ -1,12 +1,16 @@
-.copyright {
-  font-variant: small-caps;
-}
+.footer {
+  margin-left: 20px;
 
-.telegram {
-  cursor: pointer;
-  transition: 0.4s;
+  &__copyright {
+    text-transform: lowercase;
+  }
 
-  &:hover {
-    opacity: 0.6;
+  &__icon {
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }

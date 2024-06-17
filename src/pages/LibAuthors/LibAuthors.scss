@@ -1,7 +1,69 @@
-.chernyshev,
-.holmov {
-  background: rgba(100, 111, 110, 0.1);
-  border: 2px solid $main-color;
-  border-radius: $border-radius;
-  padding: 20px;
+@import '../../assets/styles/mixins/_flexbox';
+@import '../../assets/styles/mixins/query';
+
+.lib-authors {
+  @include flexbox(center, center, row, 20px);
+  height: 100%;
+  margin-top: 4rem;
+  margin-inline: 20px;
+
+  @include query(max, tablet) {
+    @include flexbox(center, center, column, 20px);
+    margin-top: 8rem;
+  }
+
+  @include query(max, mobile) {
+    @include flexbox(center, center, column, 20px);
+  }
+
+  &__author {
+    background: rgba(100, 111, 110, 0.1);
+    border-radius: $border-radius;
+    padding: 20px;
+    min-height: 500px;
+
+    @include query(max, tablet) {
+      min-height: unset;
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+
+    background: rgba(39, 43, 43, 0.4);
+
+    border: 2px solid $main-color;
+    border-radius: $border-radius;
+    padding: 8px;
+    color: $main-color;
+    transition: 0.4s;
+    opacity: 0.6;
+    font-variant: small-caps;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include query(max, tablet) {
+      font-size: 1.5rem;
+    }
+
+    @include query(max, mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &__descr {
+    font-size: 1.3rem;
+
+    @include query(max, tablet) {
+      font-size: 1rem;
+    }
+
+    @include query(max, mobile) {
+      font-size: 0.8rem;
+    }
+  }
 }

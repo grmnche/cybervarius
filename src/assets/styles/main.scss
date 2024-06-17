@@ -8,18 +8,25 @@
 @import './animationGlitch.scss';
 
 // Components
-@import '../components/Navbar/Navbar.scss';
-@import '../components/Footer/Footer.scss';
-@import '../components/BooksStories/BooksStories.scss';
+@import '../../components/Navbar/Navbar.scss';
+@import '../../components/Footer/Footer.scss';
+@import '../../components/BooksStories/BooksStories.scss';
+@import '../../components/BooksStories/modules/Book.scss';
+
 
 // Pages
-@import '../pages/BookAuthors/BookAuthors.scss';
-@import '../pages/LibAuthors/LibAuthors';
-@import '../pages/About/About.scss';
+@import '../../pages/BookAuthors/BookAuthors.scss';
+@import '../../pages/LibAuthors/LibAuthors';
+@import '../../pages/About/About.scss';
+
+// Mixins
+@import './mixins/flexbox';
+@import './mixins/placeholder';
+@import './mixins/query';
 
 @font-face {
   font-family: Roboto;
-  src: url('../roboto/Roboto-Light.ttf');
+  src: url('../../roboto/Roboto-Light.ttf');
 }
 
 * {
@@ -58,6 +65,7 @@ body {
   flex-direction: column;
 
   position: relative;
+  height: 100%;
 
   background-size: cover;
   background-position: center;
@@ -97,7 +105,7 @@ hr {
 }
 
 .active-scale {
-  transform: scale(1.06);
+  transform: scale(1.04);
   background: rgba(58, 63, 59, 0.7);
   box-shadow: none !important;
 }
