@@ -1,5 +1,5 @@
 @mixin flexbox($justify-content, $align-items, $flex-direction, $gap) {
-    display: flex;
+    display: inline-flex;
     gap: $gap;
   
     @if $justify-content != initial {

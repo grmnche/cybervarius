@@ -1,5 +1,8 @@
+@import '../../assets/styles/mixins/flexbox.scss';
+
 .footer {
-  margin-left: 20px;
+  @include flexbox(flex-start, center, row, 20px);
+  margin: auto auto 20px 20px;
 
   &__copyright {
     text-transform: lowercase;

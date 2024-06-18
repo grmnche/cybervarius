@@ -6,8 +6,8 @@ export const BookStoreChernyshev = () => {
   const authorLibrary = useSelector((state) => state.library.books.chernyshev);
 
   return (
-    <Fragment>
+    <main className="store-page">
       <BooksChernyshev bookCards={authorLibrary} />
-    </Fragment>
+    </main>
   );
 };

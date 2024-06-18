@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="footer mb-6 mt-auto">
+    <footer className="footer">
       <a className="footer__icon" href="https://t.me/cybervarius">
-        <img className="w-6 inline" src="./assets/images/tg-clean.png" alt="" />
+        <img className="w-6 inline" src="./assets/images/tg-clean.png" alt="telegram" />
       </a>
 
-      <p className="footer__copyright text-base pt-4 lg:pt-6">
+      <p className="footer__copyright">
         © 2024 web-dragon
       </p>
-    </div>
+    </footer>
   );
 }

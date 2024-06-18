@@ -1,0 +1,7 @@
+.store-page {
+  min-height: 100vh;
+
+  @include query(max, tablet) {
+    padding: 20px;
+  }
+}

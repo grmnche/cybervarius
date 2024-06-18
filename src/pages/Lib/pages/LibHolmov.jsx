@@ -7,10 +7,9 @@ export const LibHolmov = () => {
 
   return (
     <Fragment>
-      <div className="bg"></div>
-      <div className="blur"></div>
-
-      <StoriesHolmov bookCards={authorLibrary} />
+      <main className="lib-page">
+        <StoriesHolmov bookCards={authorLibrary} />
+      </main>
     </Fragment>
   );
 };
