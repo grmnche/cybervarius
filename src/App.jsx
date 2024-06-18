@@ -1,14 +1,13 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import { Home } from './pages/Home.jsx';
-import { LibAuthors } from './pages/LibAuthors/LibAuthors.jsx';
+import { Home } from './pages/Home/Home.jsx';
+import { LibAuthors } from './pages/Lib/LibAuthors.jsx';
 import { About } from './pages/About/About.jsx';
-import { BookAuthors } from './pages/BookAuthors/BookAuthors.jsx';
-import { BookStoreChernyshev } from './pages/BookAuthors/BookStore/BookStoreChernyshev.jsx';
-import { LibChernyshev } from './pages/LibAuthors/Lib/LibChernyshev.jsx';
-import { LibHolmov } from './pages/LibAuthors/Lib/LibHolmov.jsx';
-import { BookStoreHolmov } from './pages/BookAuthors/BookStore/BookStoreHolmov.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import { StoreAuthors } from './pages/Store/StoreAuthors.jsx';
+import { BookStoreChernyshev } from './pages/Store/pages/StoreChernyshev.jsx';
+import { LibChernyshev } from './pages/Lib/pages/LibChernyshev.jsx';
+import { LibHolmov } from './pages/Lib/pages/LibHolmov.jsx';
+import { BookStoreHolmov } from './pages/Store/pages/StoreHolmov.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
         <Routes>
           <Route path={'/'} exact Component={Home} />
           <Route path={'/libAuthors'} Component={LibAuthors} />
-          <Route path={'/booksAuthors'} Component={BookAuthors} />
+          <Route path={'/booksAuthors'} Component={StoreAuthors} />
           <Route path={'/about'} Component={About} />
 
           <Route
@@ -36,8 +35,6 @@ function App() {
           <Route path={'/libChernyshev'} exact Component={LibChernyshev} />
           <Route path={'/libHolmov'} exact Component={LibHolmov} />
         </Routes>
-
-        <Footer />
       </div>
     </HashRouter>
   );

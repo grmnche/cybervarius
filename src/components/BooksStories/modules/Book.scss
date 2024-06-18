@@ -39,9 +39,6 @@
       margin-top: 20px;
     }
 
-    @include query(max, mobile) {
-    }
-
     &::-webkit-scrollbar {
       width: 0;
     }
@@ -66,16 +63,29 @@
 
   &__btn {
     background: $main-color;
-    opacity: 0.6;
     color: rgba(0, 0, 0, 0.8);
+
+    font-size: 1.4rem;
     text-align: center;
     border-radius: $border-radius;
+
     font-variant: small-caps;
-    cursor: pointer;
+
     transition: 0.4s;
+    opacity: 0.6;
+
+    cursor: pointer;
 
     &:hover {
       opacity: 0.5;
+    }
+  }
+
+  &__descr {
+    font-size: 1.4rem;
+
+    @include query(max, tablet) {
+      font-size: 1.2rem;
     }
   }
 

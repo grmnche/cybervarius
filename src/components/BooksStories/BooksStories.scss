@@ -1,12 +1,18 @@
 @import '../../assets/styles/mixins/flexbox.scss';
-@import '../../assets/styles/mixins/query';
+@import '../../assets/styles/mixins/query.scss';
 
 .book-list {
   @include flexbox(initial, initial, column, 20px);
+  width: 90%;
+
+  @include query(max, tablet) {
+    width: 100%;
+  }
 
   &__outer {
     @include flexbox(center, initial, row, 0);
     height: 40rem;
+    width: 90%;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -20,9 +26,7 @@
 
     @include query(max, tablet) {
       margin-top: 8rem;
-    }
-
-    @include query(max, mobile) {
+      width: 100%;
     }
   }
 }

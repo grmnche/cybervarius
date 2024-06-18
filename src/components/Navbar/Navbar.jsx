@@ -61,7 +61,7 @@ function Navbar() {
           onClick={handleNavLinkClick}
         >
           <li className="nav-item">
-            <div className="nav-link-inner">Главная</div>
+            <p className="nav-link-inner">Главная</p>
           </li>
         </NavLink>
         <div
@@ -79,7 +79,7 @@ function Navbar() {
             onClick={handleNavLinkClick}
           >
             <li className="nav-item">
-              <div className="nav-link-inner">Библиотека</div>
+              <p className="nav-link-inner">Библиотека</p>
             </li>
           </NavLink>
 
@@ -119,7 +119,7 @@ function Navbar() {
             onClick={handleNavLinkClick}
           >
             <li className="nav-item">
-              <div className="nav-link-inner">Книжная лавка</div>
+              <p className="nav-link-inner">Книжная лавка</p>
             </li>
           </NavLink>
 
@@ -153,7 +153,7 @@ function Navbar() {
           onClick={handleNavLinkClick}
         >
           <li className="nav-item">
-            <div className="nav-link-inner">О Кибервариусе</div>
+            <p className="nav-link-inner">О Кибервариусе</p>
           </li>
         </NavLink>
       </ul>

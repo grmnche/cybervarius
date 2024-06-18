@@ -1,33 +1,79 @@
-.about-btn {
-  font-variant: small-caps;
-  background: rgba(100, 111, 110, 0.2);
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: 0.4s;
+.about-page {
+  padding: 20px;
 
-  &:hover {
-    background: rgba(100, 111, 110, 0.1);
+  .about {
+    @include flexbox(center, center, row, 20px);
+    width: 100%;
+    padding-top: 10rem;
+
+    @include query(max, tablet) {
+      @include flexbox(center, center, column, 20px);
+    }
   }
-}
 
-.active-scale-about {
-  transform: scale(1.06);
-  transform: translateY(20px);
-  background: rgba(58, 63, 59, 0.1) !important;
-  box-shadow: none !important;
-  color: $main-shadow;
-}
+  .about-card {
+    width: 100%;
 
-.description-about {
-  background: rgba(100, 111, 110, 0.1);
-  border-radius: $border-radius;
-  left: 0;
-}
+    &__title {
+      font-variant: small-caps;
+      background: rgba(100, 111, 110, 0.2);
+      border-radius: $border-radius;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      padding: 20px;
 
-.description-about-other {
-  color: $main-color-dark;
-}
+      transition: 0.4s;
+      cursor: pointer;
 
-.about-other-btn {
-  font-variant: small-caps;
+      &:hover {
+        background: rgba(100, 111, 110, 0.1);
+      }
+    }
+
+    &__descr {
+      left: 0;
+
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      padding: 20px;
+
+      background: rgba(100, 111, 110, 0.1);
+      border-radius: $border-radius;
+      margin: 30px 0;
+
+      @include query(min, tablet) {
+        position: absolute;
+      }
+    }
+
+    &_active {
+      transform: scale(1.06);
+      transform: translateY(20px);
+      background: rgba(58, 63, 59, 0.1) !important;
+      box-shadow: none !important;
+      color: $main-shadow;
+    }
+  }
+
+  .other {
+    @include flexbox(initial, initial, column, 60px);
+    margin-top: 14rem;
+
+    @include query(max, tablet) {
+      margin-top: 4rem;
+      gap: 40px;
+    }
+
+    &__container {
+      @include flexbox(initial, initial, column, 20px);
+    }
+
+    &__title {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-variant: small-caps;
+    }
+
+    &__descr {
+      color: $main-color-dark;
+      font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+  }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 export default function Greet() {
   return (
     <div data-aos="fade-up" className="cyber-text-container w-11/12 mx-auto">
-      <div className="mt-56 lg:mt-96 md:ml-28 lg:ml-52">
+      <div className="pt-56 lg:pt-96 md:ml-28 lg:ml-52">
         <img
           className="w-full md:w-2/3 lg:w-2/3"
           src="./assets/images/logo-text.svg"

@@ -7,8 +7,8 @@ export const BookStoreHolmov = () => {
   const authorLibrary = useSelector((state) => state.library.books.holmov);
 
   return (
-    <Fragment>
+    <main className="store-page">
       <BooksHolmov bookCards={authorLibrary} />
-    </Fragment>
+    </main>
   );
 };

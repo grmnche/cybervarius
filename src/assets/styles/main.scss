@@ -13,16 +13,13 @@
 @import '../../components/BooksStories/BooksStories.scss';
 @import '../../components/BooksStories/modules/Book.scss';
 
-
 // Pages
-@import '../../pages/BookAuthors/BookAuthors.scss';
-@import '../../pages/LibAuthors/LibAuthors';
+@import '../../pages/Store/StoreAuthors.scss';
+@import '../../pages/Store/pages/Store.scss';
+@import '../../pages/Lib/LibAuthors.scss';
+@import '../../pages/Lib/pages/Lib.scss';
 @import '../../pages/About/About.scss';
-
-// Mixins
-@import './mixins/flexbox';
-@import './mixins/placeholder';
-@import './mixins/query';
+@import '../../pages/Home/Home.scss';
 
 @font-face {
   font-family: Roboto;
@@ -30,6 +27,10 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
   &::-webkit-scrollbar {
     width: 4px;
     border-radius: $border-radius;
@@ -45,14 +46,11 @@
 
 html,
 body {
+  width: 100%;
   height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-width: 100%;
-  min-height: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: rgb(20, 20, 20);
 
@@ -61,34 +59,8 @@ body {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-
-  position: relative;
   height: 100%;
-
   background-size: cover;
-  background-position: center;
-}
-
-#root {
-  height: 100%;
-}
-
-.home-page {
-  height: 100vh;
-}
-
-.about {
-  span {
-    font-variant: small-caps;
-  }
-}
-
-hr {
-  background: $main-color;
-  height: 2px;
-  border-radius: $border-radius;
 }
 
 .hide {
@@ -105,25 +77,14 @@ hr {
 }
 
 .active-scale {
-  transform: scale(1.04);
   background: rgba(58, 63, 59, 0.7);
   box-shadow: none !important;
+
+  @include query(min, mobile) {
+    transform: scale(1.04);
+  }
 }
 
 .active {
   color: rgba(0, 0, 0, 0.8);
-}
-
-.book-image {
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: 0.4s;
-
-  &:hover {
-    transform: scale(1.06);
-  }
-}
-
-.book-title {
-  font-variant: small-caps;
 }
