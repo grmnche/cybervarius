@@ -13,6 +13,7 @@
 
     @include query(max, tablet) {
       @include flexbox(center, center, column, 20px);
+      
       margin-top: 8rem;
       margin-bottom: 20px;
     }

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import { AboutCard } from './modules/AboutCard.jsx';
 
 export const About = () => {
   const cardsAbout = [
@@ -28,27 +29,6 @@ export const About = () => {
     },
   ];
 
-  const cardsAboutOther = [
-    {
-      id: 1,
-      name: 'Как купить',
-      description:
-        'Чтобы приобрести книгу, просто напишите на order@cybervarius.ru. Укажите название. Вам придет ответное письмо с номером карты для перевода. После оплаты книга будет выслана на ваш E-mail.',
-    },
-    {
-      id: 2,
-      name: 'О ценах и скидках',
-      description:
-        'Книги продаются без посредничества издательских платформ. Мы не используем платежных систем. На некоторые книги вы можете назначить свою цену. Возможны индивидуальные скидки.',
-    },
-    {
-      id: 3,
-      name: 'Форматы электронных книг',
-      description:
-        'Мы высылаем книги в формате PDF, а также по вашему запросу - в любых популярных форматах — EPUB, MOBI, FB2 и др. Если книга не открылась на вашем устройстве, напишите на order@cybervarius.ru или на support@cybervarius.ru, мы поможем.',
-    },
-  ];
-
   useEffect(() => {
     const cardsAbout = document.querySelectorAll('.about-card__title');
 
@@ -73,36 +53,30 @@ export const About = () => {
     }
   };
 
-  function AboutCard({ index }) {
-    return (
-      <div className="about-card">
-        <div
-          onClick={handleClick}
-          className="about-card__title p-3 text-center text-3xl"
-        >
-          {cardsAbout[index].name}
-        </div>
-        <p className="about-card__descr  hide p-6 lg:p-12 my-8 font-thin">
-          {cardsAbout[index].description}
-        </p>
-      </div>
-    );
-  }
-
   return (
     <Fragment>
       <main data-aos="fade-up" className="about-page">
         <div className="about">
-          <AboutCard index={0} />
-          <AboutCard index={1} />
-          <AboutCard index={2} />
+          <AboutCard
+            index={0}
+            cardsAbout={cardsAbout}
+            handleClick={handleClick}
+          />
+          <AboutCard
+            index={1}
+            cardsAbout={cardsAbout}
+            handleClick={handleClick}
+          />
+          <AboutCard
+            index={2}
+            cardsAbout={cardsAbout}
+            handleClick={handleClick}
+          />
         </div>
 
         <div className="other">
-          <div className='other__container'>
-            <p className="other__title">
-              Как купить
-            </p>
+          <div className="other__container">
+            <p className="other__title">Как купить</p>
 
             <p className="other__descr font-thin">
               Чтобы приобрести книгу, просто напишите на order@cybervarius.ru.
@@ -111,10 +85,8 @@ export const About = () => {
             </p>
           </div>
 
-          <div className='other__container'>
-            <p className="other__title">
-              О ценах и скидках
-            </p>
+          <div className="other__container">
+            <p className="other__title">О ценах и скидках</p>
 
             <p className="other__descr font-thin">
               Книги продаются без посредничества издательских платформ. Мы не
@@ -123,10 +95,8 @@ export const About = () => {
             </p>
           </div>
 
-          <div className='other__container'>
-            <p className="other__title">
-              Форматы электронных книг
-            </p>
+          <div className="other__container">
+            <p className="other__title">Форматы электронных книг</p>
 
             <p className="other__descr font-thin">
               Мы высылаем книги в формате PDF, а также по вашему запросу - в

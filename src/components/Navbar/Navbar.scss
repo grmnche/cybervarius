@@ -1,6 +1,9 @@
+@import '../../assets/styles/mixins/flexbox.scss';
+@import '../../assets/styles/mixins/query.scss';
+
 nav {
   font-variant: small-caps;
-  z-index: 100;
+  z-index: 2;
 }
 
 .nav-logo {
@@ -14,13 +17,15 @@ nav {
   opacity: 0.7;
 }
 
-.nav-lib,
-.nav-books {
+.nav-link-container {
   position: relative;
+
+  @include query(max, tablet) {
+    width: 100%;
+  }
 }
 
-.nav-lib-chernyshev,
-.nav-lib-holmov {
+.nav-subitem {
   color: $main-shadow;
   background: rgba(39, 43, 43, 0.7);
   border-radius: $border-radius;
@@ -28,6 +33,14 @@ nav {
 
   &:hover {
     background: $main-shadow;
+  }
+}
+
+.nav-list {
+  @include flexbox(center, flex-start, row, 20px);
+
+  @include query(max, tablet) {
+    @include flexbox(center, center, column, 20px);
   }
 }
 
@@ -62,7 +75,7 @@ nav {
 
 .nav-link-inner {
   padding: 6px 40px 6px 40px;
-  z-index: 100;
+  z-index: 1;
 }
 
 .nav-link {
@@ -70,9 +83,13 @@ nav {
   transition: 0.4s !important;
   color: $main-color;
   position: relative;
-  
+
   border: 2px solid $main-color;
   border-radius: $border-radius;
+
+  @include query(max, tablet) {
+    width: 100%;
+  }
 }
 
 .nav-link-shadow {
@@ -91,27 +108,20 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 1490px) {
-  nav {
-    margin: 0 !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 62px;
-  }
-
+@include query(max, tablet) {
   .menu-list {
     display: flex;
   }
 
-  nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.6rem;
-  }
-
   nav {
     display: block;
+    margin: 0 !important;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+    }
   }
 
   .checkbox {
@@ -121,7 +131,7 @@ nav {
     height: 32px;
     width: 32px;
     right: 1rem;
-    z-index: 5;
+    z-index: 4;
     opacity: 0;
     cursor: pointer;
   }
@@ -133,7 +143,7 @@ nav {
     position: absolute;
     top: 1.6rem;
     right: 1rem;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,19 +174,19 @@ nav {
   .nav-list {
     position: fixed;
     display: flex;
-    justify-content: center;
 
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 8px;
     width: 100%;
     height: 100vh;
     transform: translate(-150%);
-    flex-direction: column;
-    row-gap: 20px;
+
     transition: transform 0.5s ease-in-out;
     text-align: center;
     opacity: 0;
-    z-index: 10000;
+    z-index: 2;
+
+    padding-inline: 20px;
   }
 
   nav input[type='checkbox']:checked ~ .nav-list {

@@ -5,13 +5,14 @@
 @import './variables';
 
 // Animation
-@import './animationGlitch.scss';
+@import './animation/glitch.scss';
 
 // Components
 @import '../../components/Navbar/Navbar.scss';
 @import '../../components/Footer/Footer.scss';
 @import '../../components/BooksStories/BooksStories.scss';
 @import '../../components/BooksStories/modules/Book.scss';
+@import '../../pages/About/modules/AboutCard.scss';
 
 // Pages
 @import '../../pages/Store/StoreAuthors.scss';

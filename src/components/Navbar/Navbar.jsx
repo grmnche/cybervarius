@@ -54,7 +54,7 @@ function Navbar() {
       <ul className="nav-list text-lg md:text-xl lg:text-2xl">
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'nav-link mx-2 nav-link-shadow active' : 'nav-link mx-2'
+            isActive ? 'nav-link nav-link-shadow active' : 'nav-link'
           }
           to="/"
           end
@@ -67,7 +67,7 @@ function Navbar() {
         <div
           onMouseEnter={libHandler}
           onMouseLeave={libHandler}
-          className="nav-lib 2xl:h-28 mx-2 inline-block"
+          className="nav-link-container 2xl:h-28 inline-block"
         >
           <NavLink
             className={({ isActive }) =>
@@ -87,7 +87,7 @@ function Navbar() {
             className={isActiveLib ? 'lib-chapters hidden lg:block' : 'fade'}
           >
             <NavLink to="/libChernyshev" onClick={handleNavLinkClick}>
-              <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
+              <div className="nav-subitem mt-2 p-1 absolute left-0">
                 <img
                   className="w-10"
                   src="./assets/images/chernyshev.png"
@@ -97,7 +97,7 @@ function Navbar() {
             </NavLink>
 
             <NavLink to="/libHolmov" onClick={handleNavLinkClick}>
-              <div className="nav-lib-holmov mt-2 p-1 absolute right-0">
+              <div className="nav-subitem mt-2 p-1 absolute right-0">
                 <img className="w-10" src="./assets/images/holmov.png" alt="" />
               </div>
             </NavLink>
@@ -107,7 +107,7 @@ function Navbar() {
         <div
           onMouseEnter={booksHandler}
           onMouseLeave={booksHandler}
-          className="nav-books mx-2 2xl:h-28 inline-block"
+          className="nav-link-container 2xl:h-28 inline-block"
         >
           <NavLink
             className={({ isActive }) =>
@@ -129,7 +129,7 @@ function Navbar() {
             }
           >
             <NavLink to="/booksChernyshev" onClick={handleNavLinkClick}>
-              <div className="nav-lib-chernyshev mt-2 p-1 absolute left-0">
+              <div className="nav-subitem mt-2 p-1 absolute left-0">
                 <img
                   className="w-10"
                   src="./assets/images/chernyshev.png"
@@ -139,7 +139,7 @@ function Navbar() {
             </NavLink>
 
             <NavLink to="/booksHolmov" onClick={handleNavLinkClick}>
-              <div className="nav-lib-holmov mt-2 p-1 absolute right-0">
+              <div className="nav-subitem mt-2 p-1 absolute right-0">
                 <img className="w-10" src="./assets/images/holmov.png" alt="" />
               </div>
             </NavLink>
@@ -147,7 +147,7 @@ function Navbar() {
         </div>
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'nav-link mx-2 nav-link-shadow active' : 'nav-link mx-2'
+            isActive ? 'nav-link nav-link-shadow active' : 'nav-link'
           }
           to="/about"
           onClick={handleNavLinkClick}
