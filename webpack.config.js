@@ -58,8 +58,6 @@ const babelOptions = (preset) => {
   return opts;
 };
 
-console.log('is dev', isDev);
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
