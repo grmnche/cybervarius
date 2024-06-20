@@ -5,8 +5,8 @@
     position: relative;
     width: 40%;
 
-    color: $main-color;
-    border: 2px solid $main-shadow;
+    color: $primary;
+    border: 2px solid $shadow;
     border-radius: $border-radius;
     transition: 0.2s !important;
     cursor: pointer;
@@ -17,14 +17,14 @@
 
     &:hover {
       @include query(min, tablet) {
-        box-shadow: 0 0 20px $main-shadow;
+        box-shadow: 0 0 20px $shadow;
       }
     }
   }
 
   &__preview {
     position: absolute;
-    background: rgba(100, 111, 110, 0.2);
+    background: $third;
     border-radius: $border-radius;
     max-height: 40rem;
     width: 50%;
@@ -61,14 +61,24 @@
 
   &__image {
     border-radius: $border-radius;
+    max-height: 400px;
+
+    @include query(max, tablet) {
+      max-height: 300px;
+    }
+
+    @include query(max, mobile) {
+      max-height: 250px;
+    }
   }
 
   &__btn {
-    background: $main-color;
+    background: $primary;
     color: rgba(0, 0, 0, 0.8);
     width: 100%;
     font-size: 1.4rem;
     text-align: center;
+    text-transform: lowercase;
     border-radius: $border-radius;
 
     font-variant: small-caps;
@@ -96,28 +106,28 @@
   }
 
   &__series-header {
-    color: $main-shadow;
+    color: $shadow;
   }
 
   &__series {
-    color: $main-color;
+    color: $primary;
     font-variant: small-caps;
   }
 
   &__number {
     font-variant: small-caps;
-    color: $main-color-dark;
+    color: $secondary;
   }
 
   &__series,
   &__number,
   &__additional {
     pointer-events: none;
-    color: $main-shadow;
+    color: $shadow;
   }
 
   &__quote {
-    color: $main-color;
+    color: $primary;
     opacity: 0.6;
   }
 }

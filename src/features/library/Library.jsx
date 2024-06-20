@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addStory, showStories } from './librarySlice.js';
+import { addStory } from './librarySlice.js';
 
 export function Library() {
   const library = useSelector((state) => state.library.stories);

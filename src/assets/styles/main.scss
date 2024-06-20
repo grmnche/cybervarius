@@ -4,6 +4,7 @@
 
 @import './variables';
 
+// Mixins
 @import './mixins/flexbox.scss';
 @import './mixins/query.scss';
 
@@ -40,13 +41,13 @@
   &::-webkit-scrollbar {
     width: 4px;
     border-radius: $border-radius;
-    background: $main-color;
+    background: $third;
   }
 
   &::-webkit-scrollbar-thumb {
     width: 6px;
     border-radius: $border-radius;
-    background: rgb(79, 86, 82);
+    background: $primary;
   }
 }
 
@@ -59,7 +60,7 @@ body {
 body {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(20, 20, 20);
-  color: $main-color;
+  color: $primary;
 }
 
 .app {
@@ -81,14 +82,10 @@ body {
 }
 
 .active-scale {
-  background: rgba(58, 63, 59, 0.7);
+  background: $third;
   box-shadow: none !important;
 
   @include query(min, tablet) {
     transform: scale(1.04);
   }
-}
-
-.active {
-  color: rgba(0, 0, 0, 0.8);
 }

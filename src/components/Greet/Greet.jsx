@@ -5,7 +5,7 @@ export default function Greet() {
     <div data-aos="fade-up" className="greet cyber-text-container">
       <img
         className='greet__logo-text'
-        src="./assets/images/logo-text.svg"
+        src="./assets/images/icons/logo-text.svg"
         alt=""
       />
 

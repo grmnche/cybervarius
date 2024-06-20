@@ -4,6 +4,18 @@
 
   &__copyright {
     text-transform: lowercase;
+
+    a {
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
   }
 
   &__icon {

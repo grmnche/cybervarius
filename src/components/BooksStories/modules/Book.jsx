@@ -62,7 +62,7 @@ export function Book({ index, book }) {
       >
         <img
           src={book.image}
-          className="book-card__image w-40 lg:w-72 mx-auto"
+          className="book-card__image mx-auto"
         />
 
         <button
@@ -76,11 +76,13 @@ export function Book({ index, book }) {
           <Reader book={book} closeBtnClick={closeBtnClick} />
         ) : null}
 
-        <div className="font-thin mt-4 mx-auto">
-          <span className="book-card__series-header">Цикл: </span>
+        {book.series ? (
+          <div className="font-thin mt-4 mx-auto">
+            <span className="book-card__series-header">Цикл: </span>
 
-          <span className="book-card__series">{book.series}</span>
-        </div>
+            <span className="book-card__series">{book.series}</span>
+          </div>
+        ) : null}
 
         <p className="book-card__number font-thin mt-4">{book.bookNumber}</p>
 

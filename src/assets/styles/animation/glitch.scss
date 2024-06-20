@@ -30,7 +30,7 @@
 .layers::after {
   top: 5px;
   left: -10px;
-  color: $main-color;
+  color: $primary;
 }
 
 .single-path {
@@ -432,7 +432,7 @@
 
   50% {
     font-weight: 300;
-    color: $main-color;
+    color: $primary;
     filter: blur(2px);
   }
 

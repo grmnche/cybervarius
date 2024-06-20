@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import Aos from 'aos';
+import React, { useState } from 'react';
 import 'aos/dist/aos.css';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
   const [isActiveLib, setIsActiveLib] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isActiveBooks, setIsActiveBooks] = useState(false);
@@ -35,58 +30,46 @@ function Navbar() {
         checked={isNavOpen}
         onChange={() => setIsNavOpen(!isNavOpen)}
       />
-      
+
       <div className="hamburger-lines">
         <span className="line line1"></span>
         <span className="line line2"></span>
         <span className="line line3"></span>
       </div>
 
-      <div className="nav-logo">
-        <NavLink to="/" end>
-          <img
-            className="w-32 lg:48 inline-block"
-            src="./assets/images/logo.svg"
-            alt=""
-          />
-        </NavLink>
-      </div>
+      <NavLink className="nav-logo" to="/" end>
+        <img
+          className="w-32 lg:48 inline-block"
+          src="./assets/images/icons/logo.svg"
+          alt=""
+        />
+      </NavLink>
 
       <ul className="nav-list text-lg md:text-xl lg:text-2xl">
         <NavLink
-          className={({ isActive }) =>
-            isActive ? 'nav-link nav-link-shadow active' : 'nav-link'
-          }
+          className={`nav-link ${({ isActive }) => (isActive ? 'active' : '')}`}
           to="/"
           end
           onClick={handleNavLinkClick}
         >
-          <li className="nav-item">
-            <p className="nav-link-inner">Главная</p>
-          </li>
+          Главная
         </NavLink>
+
         <div
           onMouseEnter={libHandler}
           onMouseLeave={libHandler}
-          className="nav-link-container 2xl:h-28 inline-block"
+          className="nav-link__container 2xl:h-28 inline-block"
         >
           <NavLink
-            className={({ isActive }) =>
-              isActive
-                ? 'nav-link nav-link-shadow active w-full'
-                : 'nav-link w-full'
-            }
+            className={`nav-link ${({ isActive }) =>
+              isActive ? 'active' : ''}`}
             to="/libAuthors"
             onClick={handleNavLinkClick}
           >
-            <li className="nav-item">
-              <p className="nav-link-inner">Библиотека</p>
-            </li>
+            Библиотека
           </NavLink>
 
-          <div
-            className={isActiveLib ? 'lib-chapters hidden lg:block' : 'fade'}
-          >
+          <div className={isActiveLib ? 'chapters' : 'fade'}>
             <NavLink to="/libChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-subitem mt-2 p-1 absolute left-0">
                 <img
@@ -108,27 +91,18 @@ function Navbar() {
         <div
           onMouseEnter={booksHandler}
           onMouseLeave={booksHandler}
-          className="nav-link-container 2xl:h-28 inline-block"
+          className="nav-link__container 2xl:h-28 inline-block"
         >
           <NavLink
-            className={({ isActive }) =>
-              isActive
-                ? 'nav-link nav-link-shadow active w-full'
-                : 'nav-link w-full'
-            }
+            className={`nav-link ${({ isActive }) =>
+              isActive ? 'active' : ''}`}
             to="/booksAuthors"
             onClick={handleNavLinkClick}
           >
-            <li className="nav-item">
-              <p className="nav-link-inner">Книжная лавка</p>
-            </li>
+            Книжная лавка
           </NavLink>
 
-          <div
-            className={
-              isActiveBooks ? 'books-chapters hidden lg:block' : 'fade'
-            }
-          >
+          <div className={isActiveBooks ? 'chapters' : 'fade'}>
             <NavLink to="/booksChernyshev" onClick={handleNavLinkClick}>
               <div className="nav-subitem mt-2 p-1 absolute left-0">
                 <img
@@ -146,16 +120,13 @@ function Navbar() {
             </NavLink>
           </div>
         </div>
+
         <NavLink
-          className={({ isActive }) =>
-            isActive ? 'nav-link nav-link-shadow active' : 'nav-link'
-          }
+          className={`nav-link ${({ isActive }) => (isActive ? 'active' : '')}`}
           to="/about"
           onClick={handleNavLinkClick}
         >
-          <li className="nav-item">
-            <p className="nav-link-inner">О Кибервариусе</p>
-          </li>
+          О Кибервариусе
         </NavLink>
       </ul>
     </nav>
