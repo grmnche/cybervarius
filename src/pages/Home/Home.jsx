@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-import Greet from '../../components/Greet.jsx';
+import Greet from '../../components/Greet/Greet.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 
 export function Home() {

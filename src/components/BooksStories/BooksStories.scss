@@ -1,6 +1,3 @@
-@import '../../assets/styles/mixins/flexbox.scss';
-@import '../../assets/styles/mixins/query.scss';
-
 .book-list {
   @include flexbox(initial, initial, column, 20px);
   width: 90%;

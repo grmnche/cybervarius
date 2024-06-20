@@ -35,6 +35,7 @@ function Navbar() {
         checked={isNavOpen}
         onChange={() => setIsNavOpen(!isNavOpen)}
       />
+      
       <div className="hamburger-lines">
         <span className="line line1"></span>
         <span className="line line2"></span>

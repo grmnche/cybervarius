@@ -1,0 +1,24 @@
+.greet {
+  padding: 20rem 0 0 10rem;
+  text-transform: lowercase;
+
+  @include query(max, tablet) {
+    padding: 10rem 0 0 4rem;
+  }
+
+  @include query(max, mobile) {
+    padding: 10rem 0 0 20px;
+  }
+
+  &__logo-text {
+    width: 60%;
+
+    @include query(max, tablet) {
+      width: 70%;
+    }
+
+    @include query(max, mobile) {
+      width: 80%;
+    }
+  }
+}

@@ -1,4 +1,3 @@
-@import '../../assets/styles/mixins/flexbox.scss';
 
 .home-page {
   @include flexbox(center, center, column, 20px);

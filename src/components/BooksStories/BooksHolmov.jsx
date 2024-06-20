@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import 'aos/dist/aos.css';
 import { Book } from './modules/Book.jsx';
 export function BooksHolmov(props) {
-  const bookCards = props.bookCards;
+  const books = props.bookCards;
 
   return (
     <div className="book-list__outer">
       <div className="book-list">
-        {bookCards.map((card, idx) => (
-          <Book key={idx} index={idx} props={props} />
+        {books.map((book, idx) => (
+          <Book key={idx} index={idx} book={book} />
         ))}
       </div>
     </div>

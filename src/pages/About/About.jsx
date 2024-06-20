@@ -21,12 +21,6 @@ export const About = () => {
       description:
         'В книжной лавке Кибервариуса находятся все книги авторов, изданные в электронном виде и доступные к покупке на сегодня. Мы предлагаем их вам по самой низкой цене. Приобретая книги здесь, вы платите напрямую авторам. Мы гарантируем полную безопасность и удобство заказа.',
     },
-    {
-      id: 3,
-      name: 'Книжная лавка',
-      description:
-        'В книжной лавке Кибервариуса находятся все книги авторов, изданные в электронном виде и доступные к покупке на сегодня. Мы предлагаем их вам по самой низкой цене. Приобретая книги здесь, вы платите напрямую авторам. Мы гарантируем полную безопасность и удобство заказа.',
-    },
   ];
 
   useEffect(() => {
@@ -57,21 +51,11 @@ export const About = () => {
     <Fragment>
       <main data-aos="fade-up" className="about-page">
         <div className="about">
-          <AboutCard
-            index={0}
-            cardsAbout={cardsAbout}
-            handleClick={handleClick}
-          />
-          <AboutCard
-            index={1}
-            cardsAbout={cardsAbout}
-            handleClick={handleClick}
-          />
-          <AboutCard
-            index={2}
-            cardsAbout={cardsAbout}
-            handleClick={handleClick}
-          />
+          {cardsAbout.map((card, idx) => {
+            return (
+              <AboutCard index={idx} card={card} handleClick={handleClick} />
+            );
+          })}
         </div>
 
         <div className="other">
